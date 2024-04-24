@@ -29,7 +29,7 @@ body {
    text-align: right;
    padding: 3px 6px;
    outline: none;
-   font-size: 40px;
+   font-size: 20px;
    border: 5px solid rgb(123, 125, 235);
    border-radius: 6px;
    color: black;
@@ -38,12 +38,12 @@ body {
 }
 
 .btn input[type='button'] {
-   width: 50px;
+   width: 30px;
    padding: 2px;
    margin: 2px 0px;
-   height: 40px;
+   height: 20px;
    cursor: pointer;
-   font-size: 18px;
+   font-size: 10px;
    transition: 0.5s;
    background-color: #4a746a;
    border-radius: 6px;
