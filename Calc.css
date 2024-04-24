@@ -1,64 +1,64 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'poppins', sans-serif;
+   padding: 0;
+   margin: 0;
+   font-family: 'poppins', sans-serif;
 }
 
 body {
-    background-color: #cacc50;
-    display: grid;
-    height: 100vh;
-    place-items: center;
+   background-color: #cacc50;
+   display: grid;
+   height: 100vh;
+   place-items: center;
 }
 
 .main {
-    width: 90%; /* Adjusted for responsiveness */
-    max-width: 400px; /* Added max-width for larger screens */
-    height: auto; /* Changed to auto to accommodate content */
-    background-color: white;
-    position: relative; /* Removed absolute positioning */
-    border: 5px solid black;
-    border-radius: 6px;
-    box-sizing: border-box; /* Added for consistent sizing */
-    padding: 20px; /* Added padding for spacing */
+   width: 90%; /* Adjusted for responsiveness */
+   max-width: 400px; /* Added max-width for larger screens */
+   height: auto; /* Changed to auto to accommodate content */
+   background-color: white;
+   position: relative; /* Removed absolute positioning */
+   border: 5px solid black;
+   border-radius: 6px;
+   box-sizing: border-box; /* Added for consistent sizing */
+   padding: 20px; /* Added padding for spacing */
 }
 
 .main input[type='text'] {
-    width: 100%; /* Adjusted width to fill container */
-    height: 80px;
-    text-align: right;
-    padding: 3px 6px;
-    outline: none;
-    font-size: 40px;
-    border: 5px solid rgb(123, 125, 235);
-    border-radius: 6px;
-    color: black;
-    box-sizing: border-box; /* Added for consistent sizing */
-    margin-bottom: 10px; /* Added margin for spacing */
+   width: 100%; /* Adjusted width to fill container */
+   height: 50px;
+   text-align: right;
+   padding: 3px 6px;
+   outline: none;
+   font-size: 40px;
+   border: 5px solid rgb(123, 125, 235);
+   border-radius: 6px;
+   color: black;
+   box-sizing: border-box; /* Added for consistent sizing */
+   margin-bottom: 10px; /* Added margin for spacing */
 }
 
 .btn input[type='button'] {
-    width: 90px;
-    padding: 2px;
-    margin: 2px 0px;
-    height: 60px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: 0.5s;
-    background-color: #4a746a;
-    border-radius: 6px;
-    color: white;
+   width: 50px;
+   padding: 2px;
+   margin: 2px 0px;
+   height: 40px;
+   cursor: pointer;
+   font-size: 18px;
+   transition: 0.5s;
+   background-color: #4a746a;
+   border-radius: 6px;
+   color: white;
 }
 
 .btn input[type='button']:hover {
-    background-color: black;
-    color: white;
+   background-color: black;
+   color: white;
 }
 
 /* Media query for smaller screens (phones) */
 @media screen and (max-width: 600px) {
-    .main {
-        width: 90%;
-        max-width: none;
-    }
+   .main {
+       width: 90%;
+       max-width: none;
+   }
 }
