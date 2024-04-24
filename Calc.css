@@ -1,32 +1,189 @@
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'poppins', sans-serif;
-}
-
-body {
-    background-color: #cacc50;
-    display: flex; /* Changed to flex for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh;
-}
-
-.main {
-    width: 90%; /* Adjusted for responsiveness */
-    max-width: 400px; /* Added max-width for larger screens */
-    height: auto; /* Changed to auto to accommodate content */
-    background-color: white;
-    position: relative; /* Removed absolute positioning */
-    border: 5px solid black;
-    border-radius: 6px;
-    box-sizing: border-box; /* Added for consistent sizing */
-    padding: 20px; /* Added padding for spacing */
-}
-
-.main input[type='text'] {
-    width: 100%; /* Adjusted width to fill container */
-    height: 80px;
+@font-face {
+   font-family: "San Francisco";
+   font-weight: 400;
+   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+ }
+ 
+ html,
+ body {
+   height: 100%;
+   margin: 0;
+ }
+ * {
+   box-sizing: border-box;
+ }
+ 
+ /* BACKGROUND */
+ 
+ body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #333745;
+ }
+ .dec-squares {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   z-index: -1;
+   opacity: .12;
+ }
+ .dec-square {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) rotateZ(45deg);
+   border: 1px solid #77c4d3;
+ }
+ .dec-square:nth-child(1) {
+   width: 218px;
+   height: 218px;
+ }
+ .dec-square:nth-child(2) {
+   width: 253px;
+   height: 253px;
+ }
+ .dec-square:nth-child(3) {
+   width: 293px;
+   height: 293px;
+ }
+ .dec-square:nth-child(4) {
+   width: 340px;
+   height: 340px;
+ }
+ .dec-square:nth-child(5) {
+   width: 394px;
+   height: 394px;
+ }
+ .dec-square:nth-child(6) {
+   width: 457px;
+   height: 457px;
+ }
+ .dec-square:nth-child(7) {
+   width: 530px;
+   height: 530px;
+ }
+ .dec-square:nth-child(8) {
+   width: 615px;
+   height: 615px;
+ }
+ .dec-square:nth-child(9) {
+   width: 713px;
+   height: 713px;
+ }
+ .dec-square:nth-child(10) {
+   width: 827px;
+   height: 827px;
+ }
+ .dec-square:nth-child(11) {
+   width: 959px;
+   height: 959px;
+ }
+ .dec-square:nth-child(12) {
+   width: 1112px;
+   height: 1112px;
+ }
+ .dec-square:nth-child(13) {
+   width: 1289px;
+   height: 1289px;
+ }
+ .dec-square:nth-child(14) {
+   width: 1494px;
+   height: 1494px;
+ }
+ .dec-square:nth-child(15) {
+   width: 1732px;
+   height: 1732px;
+ }
+ 
+ /* MAIN WINDOW */
+ 
+ .main-window {
+   width: 266px;
+   height: 537px;
+   background: url(https://dl.dropbox.com/s/u0kusdjl2lyp8lb/iPhone.svg) no-repeat;
+ }
+ 
+ /* DISPLAY */
+ 
+ .screen {
+   width: 224px;
+   height: 402px;
+   margin: 70px auto 0;
+   overflow: auto;
+   font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
+   word-wrap: break-word;
+ }
+ .screen .menu-icon {
+   margin: 14px 0 0 8px;
+ }
+ .screen .menu-icon a {
+   color: white;
+   font-size: 1.1rem;
+   text-decoration: none;
+   opacity: .8;
+ }
+ .screen .menu-icon:hover {
+   opacity: 1;
+ }
+ .screen .result {
+   height: 84px;
+   margin-right: 4px;
+   text-align: right;
+   font-size: 24px;
+   color: white;
+ }
+ 
+ /* BUTTONS */
+ 
+ .buttons {
+   display: flex;
+   flex-flow: row wrap;
+   margin: 0 auto;
+ }
+ .button {
+   position: relative;
+   flex-basis: 56px;
+   height: 56px;
+   border: 1px solid black;
+   font-size: 18px;
+   color: white;
+   outline: none;
+ }
+ .button.button-ac {
+   color: #f6f792;
+   text-transform: uppercase;
+ }
+ .button.button-number {
+   background: #333745;
+ }
+ .button.button-op {
+   background: #77c4d3;
+ }
+ .button.button-misc {
+   background: #212121;
+ }
+ .button.button-zero {
+   flex-basis: 112px;
+ }
+ .button.button-equal {
+   background: #ea2e49;
+ }
+ .button:active::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, .2);
+ }
+ .result {
+   width: 100%; /* Adjusted width to fill container */
+    height: 50px;
     text-align: right;
     padding: 3px 6px;
     outline: none;
@@ -34,36 +191,6 @@ body {
     border: 5px solid rgb(123, 125, 235);
     border-radius: 6px;
     color: black;
-    box-sizing: border-box; /* Added for consistent sizing */
-    margin-bottom: 10px; /* Added margin for spacing */
-}
-
-.btn {
-    display: flex; /* Added to center buttons */
-    justify-content: center; /* Center buttons horizontally */
-}
-
-.btn input[type='button'] {
-    width: 70px; /* Adjusted button width */
-    margin: 0 5px; /* Adjusted button margin */
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px; /* Adjusted font size */
-    transition: 0.5s;
-    background-color: #4a746a;
-    border-radius: 6px;
-    color: white;
-}
-
-.btn input[type='button']:hover {
-    background-color: black;
-    color: white;
-}
-
-/* Media query for smaller screens (phones) */
-@media screen and (max-width: 600px) {
-    .main {
-        width: 90%;
-        max-width: none;
-    }
-}
+    margin-bottom: 10px;
+ }
+ 
